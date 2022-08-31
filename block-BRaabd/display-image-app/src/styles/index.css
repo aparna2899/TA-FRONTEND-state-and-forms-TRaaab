@@ -1,0 +1,28 @@
+.container {
+  max-width: 60rem;
+  margin: 3rem auto;
+}
+.img-box {
+  width: 30rem;
+  margin: 2rem auto;
+}
+.center {
+  text-align: center;
+}
+img {
+  width: 100%;
+}
+
+button {
+  background-color: lightcoral;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  margin: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgba(255, 127, 80, 0.7);
+}
