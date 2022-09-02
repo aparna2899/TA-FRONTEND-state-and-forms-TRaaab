@@ -5,38 +5,30 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeQuestion: '',
-      activeAnswer: '',
+      activeIndex: null,
     };
   }
-  handleClick = (accordion) => {
-    this.setState({
-      activeQuestion: accordion.Q,
-      activeAnswer: accordion.A,
-    });
-  };
   render() {
     return (
       <div className="container">
+        <h1 className="center">FAQs</h1>
         <ul className="question-list">
-          {data.map((accordion) => (
-            <li onClick={() => this.handleClick(accordion)}>
-              <div
-                className={
-                  accordion.Q === this.state.activeQuestion ? 'question' : ''
-                }
+          {data.map((faq, index) => (
+            <li>
+              <h2
+                className={index === this.state.activeIndex ? 'question' : ''}
+                onClick={() => {
+                  this.setState({
+                    activeIndex:
+                      this.state.activeIndex === index ? null : index,
+                  });
+                }}
               >
-                <strong>Q.</strong>
-                {accordion.Q}
-              </div>
-              <div
-                className={
-                  accordion.A === this.state.activeAnswer ? 'answer' : 'hidden'
-                }
-              >
-                <strong>A.</strong>
-                {accordion.A}
-              </div>
+                {faq.Q} {this.state.activeIndex === index ? '☝🏻' : '👇🏻'}
+              </h2>
+              {index === this.state.activeIndex && (
+                <p className="answer">{faq.A}</p>
+              )}
             </li>
           ))}
         </ul>
