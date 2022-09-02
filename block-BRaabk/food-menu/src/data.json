@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "buttermilk pancakes",
+    "category": "breakfast",
+    "price": 15.99,
+    "img": "https://media.istockphoto.com/photos/pancakes-with-berries-and-maple-syrup-picture-id161170090?k=20&m=161170090&s=612x612&w=0&h=N7F_NbQsuWCyoPkoIb927mPRsyyiPxlUS0aokAhhtRM=",
+    "desc": "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed "
+  },
+  {
+    "id": 2,
+    "title": "diner double",
+    "category": "lunch",
+    "price": 13.99,
+    "img": "https://media.istockphoto.com/photos/tasty-hamburgers-with-french-fries-and-ketchup-on-wooden-table-picture-id1352688493?k=20&m=1352688493&s=612x612&w=0&h=7630mLTdeG3uboGYxAFUuHdrv5mBMP1PbCmyOGekdf4=",
+    "desc": "vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats "
+  },
+  {
+    "id": 3,
+    "title": "godzilla milkshake",
+    "category": "shakes",
+    "price": 6.99,
+    "img": "https://media.istockphoto.com/photos/iced-caramel-latte-coffee-in-a-tall-glass-picture-id673742908?k=20&m=673742908&s=612x612&w=0&h=rs-h3QsXH-oPe4NB5MShMy_HcJObXvMlcVYrSOocvU0=",
+    "desc": "ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral."
+  },
+  {
+    "id": 4,
+    "title": "country delight",
+    "category": "breakfast",
+    "price": 20.99,
+    "img": "https://media.istockphoto.com/photos/herb-omelette-with-chives-and-oregano-picture-id485040276?k=20&m=485040276&s=612x612&w=0&h=JE3ZQT7bNJQJExUEd_cDd_Fs3XAGh8FOio-31Pc3xpA=",
+    "desc": "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, "
+  },
+  {
+    "id": 5,
+    "title": "egg attack",
+    "category": "lunch",
+    "price": 22.99,
+    "img": "https://media.istockphoto.com/photos/different-ways-of-cooking-eggs-picture-id502582696?k=20&m=502582696&s=612x612&w=0&h=Z3XRNBg2guat7Pw3QMtx_fUwVl5oVicUEPwomx-mbtk=",
+    "desc": "franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up "
+  },
+  {
+    "id": 6,
+    "title": "oreo dream",
+    "category": "shakes",
+    "price": 18.99,
+    "img": "https://media.istockphoto.com/photos/mocha-milkshake-with-cookies-and-cream-picture-id1212766706?k=20&m=1212766706&s=612x612&w=0&h=eJtzMU6cRdaO1xDDzCPsdEdsAzbX47VCja3TfsUlnVE=",
+    "desc": "Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday"
+  },
+  {
+    "id": 7,
+    "title": "bacon overflow",
+    "category": "breakfast",
+    "price": 8.99,
+    "img": "https://media.istockphoto.com/photos/bagel-bacon-sausage-and-egg-breakfast-sandwich-picture-id531403492?k=20&m=531403492&s=612x612&w=0&h=28xT5wwHTITr3YM-oLr_rntYn5Su4N0CBRViPPyJBwk=",
+    "desc": "carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird "
+  },
+  {
+    "id": 8,
+    "title": "american classic",
+    "category": "lunch",
+    "price": 12.99,
+    "img": "https://media.istockphoto.com/photos/cheese-burgers-barbeque-hamburger-july-fourth-labor-day-picnic-food-picture-id184148832?k=20&m=184148832&s=612x612&w=0&h=Pv8PKjUThMm7hEL4nN60mFNK_d9uuqawyDDQivx0Ojo=",
+    "desc": "on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  "
+  },
+  {
+    "id": 9,
+    "title": "quarantine buddy",
+    "category": "shakes",
+    "price": 16.99,
+    "img": "https://media.istockphoto.com/photos/strawberry-milkshake-picture-id504639970?k=20&m=504639970&s=612x612&w=0&h=E7ixzZ8vDXlDM4mwKP_IYyisLf3E4OiANrwrOEbBtPc=",
+    "desc": "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing."
+  }
+]
