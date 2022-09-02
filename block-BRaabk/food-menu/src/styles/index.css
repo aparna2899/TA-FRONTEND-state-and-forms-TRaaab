@@ -1,0 +1,225 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom Styling */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background-color: beige;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-40 {
+  flex: 0 1 40%;
+}
+.flex-47 {
+  flex: 0 1 47%;
+}
+.flex-50 {
+  flex: 0 1 50%;
+}
+.flex-60 {
+  flex: 0 1 60%;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-top: 2rem;
+}
+h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+p {
+  font-size: 1rem;
+  color: gray;
+  margin-top: 1rem;
+}
+.categories li {
+  display: inline-block;
+  margin: 3rem 1.5rem;
+  padding: 0.2rem 1rem;
+  color: goldenrod;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.categories li:hover {
+  border: 2px solid goldenrod;
+  background-color: darkgoldenrod;
+  color: white;
+  border-radius: 4px;
+}
+.img-box {
+  height: 12rem;
+  border: 4px solid goldenrod;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+.card {
+  margin: 2rem 0;
+}
+.card hr {
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-top: 1px dotted rgba(0, 0, 0, 0.5);
+}
+hr {
+  width: 10%;
+  border: none;
+  border-top: 4px solid goldenrod;
+}
+strong {
+  color: goldenrod;
+  font-size: 1rem;
+  font-weight: bold;
+}
