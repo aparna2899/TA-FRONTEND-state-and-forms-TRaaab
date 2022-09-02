@@ -141,6 +141,11 @@ body {
 .center {
   text-align: center;
 }
+h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 2rem 0;
+}
 .question-list {
   margin: 3rem;
   padding: 2rem 4rem;
@@ -154,21 +159,17 @@ li {
   border: 1px solid darkgoldenrod;
   cursor: pointer;
 }
-strong {
-  margin-right: 1rem;
-  font-weight: bold;
-}
-.hidden {
-  display: none;
-}
+
 .question {
-  background-color: lightseagreen;
+  background-color: olive;
+  color: white;
 }
 .answer {
   display: block;
   font-size: 1.2rem;
-  background-color: lightcyan;
+  background-color: rgba(128, 128, 0, 0.2);
 }
-li div {
+li h2,
+li p {
   padding: 1rem;
 }
