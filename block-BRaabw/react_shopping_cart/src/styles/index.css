@@ -1,0 +1,356 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 4rem auto;
+  position: relative;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.align-center {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.flex-15 {
+  flex: 0 1 15%;
+}
+
+.flex-50 {
+  flex: 0 1 50%;
+}
+.flex-70 {
+  flex: 0 1 80%;
+}
+.header {
+  margin-bottom: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 2rem;
+}
+strong {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.card {
+  padding: 1rem;
+  margin-bottom: 4rem;
+  margin-right: 2rem;
+  position: relative;
+  box-shadow: 5px 5px 12px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.img-box {
+  width: 15rem;
+}
+.img-box img {
+  width: 100%;
+}
+button {
+  border: none;
+  padding: 0.8rem 2rem;
+  background-color: black;
+  color: white;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.card hr {
+  width: 12%;
+  border: none;
+  border-top: 2px solid goldenrod;
+  margin-top: 2rem;
+}
+.card:hover button {
+  background-color: goldenrod;
+}
+p {
+  margin-top: 1rem;
+}
+.tag {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.3rem;
+}
+
+.size {
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: rgb(230, 230, 230);
+  height: 1.5rem;
+  width: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 1.8;
+  cursor: pointer;
+}
+
+.size:hover {
+  background-color: black;
+  color: white;
+}
+.active {
+  background-color: black;
+  color: white;
+}
+.cart {
+  background-color: #1b1a20;
+  width: 33%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 3rem;
+}
+.cart-product {
+  padding: 1rem;
+}
+.cart-product span {
+  color: white;
+}
+.cart-product p {
+  color: grey;
+  margin-top: 0;
+}
+.cart-product img {
+  width: 5rem;
+  margin-right: 1rem;
+}
+.cart .cart-product-price {
+  color: goldenrod;
+  margin-right: 0.3rem;
+}
+.cart hr {
+  border: none;
+  border-top: 2px solid rgba(0, 0, 0, 0.8);
+  margin-top: 3rem;
+}
+.checkout {
+  padding: 1rem;
+  background-color: #1b1a20;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+.checkout p {
+  color: grey;
+  margin: 0;
+  font-size: 1rem;
+}
+.checkout strong {
+  color: goldenrod;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.checkout button {
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.close-cart,
+.open-cart {
+  background-color: #1b1a20;
+  color: white;
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  top: 0;
+  right: 33%;
+  text-align: center;
+  line-height: 3;
+  cursor: pointer;
+}
+.close-cart:hover {
+  background-color: black;
+}
+.close-cart {
+  right: 0;
+  padding: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+.cart-icon {
+  position: relative;
+}
+.yellow-circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: gold;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 0.8rem;
+  position: fixed;
+  right: 17.5%;
+  top: 10%;
+}
+select {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+}
