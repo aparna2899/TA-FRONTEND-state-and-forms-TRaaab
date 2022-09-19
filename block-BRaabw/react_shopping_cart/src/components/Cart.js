@@ -1,58 +1,72 @@
 import React from 'react';
 
 class Cart extends React.Component {
-  installmentPrice = (installments, subtotal) => {
-    return (subtotal / installments).toFixed(2);
-  };
-
   render() {
-    let { price, installments, handleClose, isClosed } = this.props;
+    let { handleClose, isClosed, handleDelete } = this.props;
+    let price = 0;
+    for (let i = 0; i < this.props.selectedProduct.length; i++) {
+      price =
+        Math.round((price + this.props.selectedProduct[i].price) * 100) / 100;
+    }
     return (
       <>
         <div
           className={isClosed === true ? 'close-cart' : 'open-cart'}
           onClick={handleClose}
         >
-          {isClosed === true ? <img src={`static/bag-icon.png`} /> : 'X'}
+          {isClosed === true ? <img src={`static/bag-icon.png`} alt="" /> : 'X'}
         </div>
 
         <div className={isClosed === true ? 'hidden' : 'cart'}>
           <div className="flex justify-center align-center">
             <div className="cart-icon">
-              <img src="static/bag-icon.png" />
-              <div className="yellow-circle">1</div>
+              <img src="static/bag-icon.png" alt="" />
+              <div className="yellow-circle">
+                {this.props.selectedProduct.length}
+              </div>
             </div>
 
             <h2 className="center">Cart</h2>
           </div>
 
           <hr></hr>
-          <div className="cart-product flex justify-between align-center">
-            <div className="flex-70 flex align-center">
-              <img src={`static/products/` + this.props.sku + `_2.jpg`} />
-              <div>
-                <span>{this.props.title}</span>
-                <p>{this.props.description}</p>
-              </div>
-            </div>
+          <ul className="cart-product">
+            {this.props.selectedProduct.map((product) => (
+              <>
+                <li
+                  key={product.id}
+                  className="flex justify-between align-center"
+                >
+                  <div
+                    onClick={() => handleDelete(product.id)}
+                    className="close-btn"
+                  >
+                    x
+                  </div>
+                  <div className="flex-15">
+                    <img
+                      src={`static/products/` + product.sku + `_2.jpg`}
+                      alt=""
+                    />
+                  </div>
+                  <div className="flex-70">
+                    <span>{product.title}</span>
+                    <p>{product.description}</p>
+                  </div>
 
-            <strong className="cart-product-price">
-              {this.props.currencyFormat}
-              {this.props.price}
-            </strong>
-          </div>
+                  <strong className="cart-product-price flex-15">
+                    {product.currencyFormat}
+                    {product.price}
+                  </strong>
+                </li>
+              </>
+            ))}
+          </ul>
           <div className="checkout">
             <div className=" flex justify-between align-center">
               <p>SUBTOTAL</p>
               <div>
-                <strong className="right">
-                  {this.props.currencyFormat} {this.props.price}
-                </strong>
-                <p>
-                  OR UP TO {this.props.installments} x{' '}
-                  {this.props.currencyFormat}
-                  {this.installmentPrice(installments, price)}
-                </p>
+                <strong className="right">$ {price}</strong>
               </div>
             </div>
             <button>CHECKOUT</button>

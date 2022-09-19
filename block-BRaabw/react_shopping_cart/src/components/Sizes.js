@@ -9,7 +9,8 @@ class Sizes extends React.Component {
         <strong>Sizes:</strong>
         {sizes.map((size) => (
           <li
-            className={size === selectedSize ? 'size active' : 'size '}
+            key={size}
+            className={selectedSize.includes(size) ? 'size active' : 'size '}
             onClick={(event) => {
               handleClick(size);
             }}
