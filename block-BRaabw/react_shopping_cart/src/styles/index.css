@@ -123,6 +123,10 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -130,7 +134,7 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1350px;
   margin: 4rem auto;
   position: relative;
 }
@@ -161,6 +165,10 @@ body {
 .wrap {
   flex-wrap: wrap;
 }
+.flex-10 {
+  flex: 0 1 10%;
+}
+
 .flex-15 {
   flex: 0 1 15%;
 }
@@ -168,11 +176,12 @@ body {
 .flex-50 {
   flex: 0 1 50%;
 }
-.flex-70 {
+
+.flex-85 {
   flex: 0 1 80%;
 }
 .header {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 h2 {
   font-size: 1.5rem;
@@ -187,8 +196,8 @@ strong {
 }
 .card {
   padding: 1rem;
-  margin-bottom: 4rem;
-  margin-right: 2rem;
+  margin-bottom: 5rem;
+  margin-right: 5rem;
   position: relative;
   box-shadow: 5px 5px 12px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -219,6 +228,10 @@ button {
 p {
   margin-top: 1rem;
 }
+.card span {
+  font-size: 0.8rem;
+  color: grey;
+}
 .tag {
   background-color: black;
   color: white;
@@ -234,14 +247,14 @@ p {
   margin-right: 1rem;
   margin-bottom: 1rem;
   display: inline-block;
-  padding: 0.5rem;
+  /* padding: 0.7rem; */
   background-color: rgb(230, 230, 230);
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
   text-align: center;
   border-radius: 50%;
-  line-height: 1.8;
   cursor: pointer;
+  padding-top: 0.7rem;
 }
 
 .size:hover {
@@ -259,10 +272,13 @@ p {
   top: 0;
   bottom: 0;
   right: 0;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 .cart-product {
   padding: 1rem;
+  padding-top: 0;
+  height: 60vh;
+  overflow-y: scroll;
 }
 .cart-product span {
   color: white;
@@ -275,6 +291,11 @@ p {
   width: 5rem;
   margin-right: 1rem;
 }
+.cart-product li {
+  position: relative;
+  padding: 1rem 0;
+  box-shadow: 0px 15px 10px -15px #111;
+}
 .cart .cart-product-price {
   color: goldenrod;
   margin-right: 0.3rem;
@@ -282,7 +303,8 @@ p {
 .cart hr {
   border: none;
   border-top: 2px solid rgba(0, 0, 0, 0.8);
-  margin-top: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 .checkout {
   padding: 1rem;
@@ -347,10 +369,59 @@ p {
   font-size: 0.8rem;
   position: fixed;
   right: 17.5%;
-  top: 10%;
+  top: 8%;
 }
 select {
   padding: 0.5rem;
   margin-left: 1rem;
   border: 1px solid rgba(128, 128, 128, 0.3);
+}
+.close-btn {
+  color: rgb(255, 255, 255, 0.5);
+  text-align: right;
+  position: absolute;
+  top: 7%;
+  right: 6%;
+  cursor: pointer;
+}
+.close-btn:hover {
+  font-size: 1.3rem;
+  color: rgba(248, 87, 87, 0.5);
+}
+
+/* Login Page  */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+form {
+  width: 30%;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 12px 5px rgba(0, 0, 0, 0.1);
+}
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+}
+.login-btn {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.google {
+  width: 20%;
+  margin: 2rem 0;
+  font-size: 1rem;
+}
+.or {
+  color: grey;
+}
+.login button:hover {
+  background-color: darkgoldenrod;
+}
+.login button {
+  border-radius: 4px;
 }

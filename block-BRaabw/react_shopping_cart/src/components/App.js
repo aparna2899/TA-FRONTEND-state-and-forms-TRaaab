@@ -9,20 +9,33 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedSize: null,
-      selectedProductId: null,
+      selectedSize: [],
+      selectedProductId: [],
       isClosed: true,
       sort: null,
     };
   }
   handleClick = (size) => {
+    let { selectedSize } = this.state;
+    if (selectedSize.includes(size)) {
+      for (let i = 0; i < selectedSize.length; i++) {
+        if (selectedSize[i] === size) {
+          selectedSize.splice(i, 1);
+        }
+      }
+    } else {
+      selectedSize.push(size);
+    }
+
     this.setState({
-      selectedSize: size,
+      selectedSize: selectedSize,
     });
   };
   handleSubmit = (id) => {
+    let { selectedProductId } = this.state;
+    selectedProductId.push(id);
     this.setState({
-      selectedProductId: id,
+      selectedProductId: selectedProductId,
     });
   };
   handleClose = () => {
@@ -41,14 +54,32 @@ class App extends React.Component {
       });
     }
   };
+  handleDelete = (id) => {
+    let { selectedProductId } = this.state;
+    for (let i = 0; i < selectedProductId.length; i++) {
+      if (selectedProductId[i] === id) {
+        selectedProductId.splice(i, 1);
+      }
+    }
+    this.setState({
+      selectedProductId: selectedProductId,
+    });
+  };
   render() {
     let sizes = [];
-    if (!this.state.selectedSize) {
+    if (this.state.selectedSize.length === 0) {
       sizes = data.products;
     } else {
       for (let i = 0; i < data.products.length; i++) {
-        if (data.products[i].availableSizes.includes(this.state.selectedSize)) {
-          sizes.push(data.products[i]);
+        for (let j = 0; j < this.state.selectedSize.length; j++) {
+          if (
+            data.products[i].availableSizes.includes(
+              this.state.selectedSize[j]
+            ) &&
+            sizes.indexOf(data.products[i]) === -1
+          ) {
+            sizes.push(data.products[i]);
+          }
         }
       }
     }
@@ -57,8 +88,8 @@ class App extends React.Component {
     } else {
       sizes.sort((a, b) => b.price - a.price);
     }
-    let selectedProduct = data.products.find(
-      (product) => product.id === this.state.selectedProductId
+    let selectedProduct = data.products.filter((product) =>
+      this.state.selectedProductId.includes(product.id)
     );
     return (
       <div className="container ">
@@ -68,10 +99,11 @@ class App extends React.Component {
             <label htmlFor="order">Order by</label>
             <select
               id="order"
+              defaultValue={'DEFAULT'}
               onChange={(event) => this.handleChange(sizes, event)}
             >
-              <option value="" disabled selected hidden>
-                Select
+              <option value="DEFAULT" disabled>
+                Sort
               </option>
               <option value="asc">Lowest to highest</option>
               <option value="desc">Highest to lowest</option>
@@ -83,7 +115,7 @@ class App extends React.Component {
             handleClick={this.handleClick}
             selectedSize={this.state.selectedSize}
           />
-          <ul className="flex wrap flex-70">
+          <ul className="flex  wrap flex-85">
             {sizes.map((product) => (
               <Products
                 key={product.id}
@@ -93,8 +125,9 @@ class App extends React.Component {
             ))}
           </ul>
           <Cart
-            {...selectedProduct}
+            selectedProduct={selectedProduct}
             handleClose={this.handleClose}
+            handleDelete={this.handleDelete}
             isClosed={this.state.isClosed}
           />
         </div>
