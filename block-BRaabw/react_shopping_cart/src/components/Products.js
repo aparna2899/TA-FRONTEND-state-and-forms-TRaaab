@@ -9,7 +9,7 @@ class Products extends React.Component {
           <img src={`static/products/` + this.props.sku + `_1.jpg`} alt="" />
         </div>
         <p>{this.props.title}</p>
-        <hr />
+        <hr className='hr' />
         <span>Sizes </span>
         {this.props.availableSizes.map((size) => (
           <span key={size}>| {size} </span>
@@ -18,7 +18,7 @@ class Products extends React.Component {
           {this.props.currencyFormat}
           {this.props.price}
         </p>
-        <button type="submit" onClick={() => this.props.handleSubmit(id)}>
+        <button className='btn' type="submit" onClick={() => this.props.handleSubmit(id)}>
           Add to cart
         </button>
         <div className={this.props.isFreeShipping ? 'tag' : ''}>
