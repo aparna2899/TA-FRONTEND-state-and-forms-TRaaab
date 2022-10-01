@@ -12,7 +12,7 @@ class Products extends React.Component {
         <hr />
         <span>Sizes </span>
         {this.props.availableSizes.map((size) => (
-          <span>| {size} </span>
+          <span key={size}>| {size} </span>
         ))}
         <p>
           {this.props.currencyFormat}
