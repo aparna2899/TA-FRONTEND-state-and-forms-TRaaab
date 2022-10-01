@@ -69,7 +69,7 @@ class Cart extends React.Component {
                 <strong className="right">$ {price}</strong>
               </div>
             </div>
-            <button>CHECKOUT</button>
+            <button className='btn-secondary'>CHECKOUT</button>
           </div>
         </div>
       </>
