@@ -183,6 +183,11 @@ body {
 .header {
   margin-bottom: 3rem;
 }
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
 h2 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -208,7 +213,7 @@ strong {
 .img-box img {
   width: 100%;
 }
-button {
+.card .btn {
   border: none;
   padding: 0.8rem 2rem;
   background-color: black;
@@ -216,13 +221,14 @@ button {
   margin-top: 0.5rem;
   cursor: pointer;
 }
-.card hr {
+.card .hr {
   width: 12%;
   border: none;
   border-top: 2px solid goldenrod;
+  margin: 0 auto;
   margin-top: 2rem;
 }
-.card:hover button {
+.card:hover .btn {
   background-color: goldenrod;
 }
 p {
@@ -389,11 +395,7 @@ select {
 }
 
 /* Login Page  */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: left;
-}
+
 form {
   width: 30%;
   margin: 2rem auto;
@@ -424,3 +426,7 @@ form {
 .login button {
   border-radius: 4px;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
